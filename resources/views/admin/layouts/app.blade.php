@@ -127,8 +127,8 @@
                             </a>
 
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item {{ request()->routeIs('product') ? 'menu-open' : '' }}">
+                            <a href="{{ route('product') }}" class="nav-link {{ request()->routeIs('product') ? 'menu-open' : '' }}">
                                 <i class="nav-icon fas fa-shopping-bag"></i>
                                 <p>
                                     Products

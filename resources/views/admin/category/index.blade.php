@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Brand</h1>
+                    <h1>Category</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -42,6 +42,8 @@
                                     Add New Category
                                 </button>
                             </div>
+
+                            @include('admin.category.add')
                         </div>
 
                         <div class="card-body py-3">
@@ -72,25 +74,20 @@
                                         </td>
                                         <td>{{ \Carbon\Carbon::parse($category->created_at)->format('jS M Y') }}</td>
                                         <td>
-                                            <div style="display: flex; align-items: center;">
-                                               <a  data-toggle="modal" data-target="#editcategoryModal"  class="edit_cat" data-id="{{ $category->id }}">
-                                                <i class="fas fa-edit mr-3 text-secondary"></i>
-                                            </a>
 
-                                                <form action="{{ route('delete.category', $category->id) }}" method="POST"
-                                                    id="deleteForm">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <a type="submit" onclick="confirmDelete({{$category->id}})">
-                                                        <i class="fas fa-trash-alt text-danger"></i>
-                                                    </a>
-                                                </form>
-                                            </div>
+                                            <div style="display: flex; align-items: center;">
+
+                                               <a type="button" data-toggle="modal" data-target="#editcategoryModal{{ $category->id }}"  class="edit_cat">
+                                                <i class="fas fa-edit mr-3 text-secondary"></i>
+                                              </a>
+
+                                              @include('admin.category.edit')
                                         </td>
 
                                     </tr>
 
                                     @endforeach
+
                                 </tbody>
 
                             </table>
@@ -107,96 +104,6 @@
     </section>
 
 </div>
-
-
-{{-- Add Category modal form start here --}}
-<div class="modal fade" id="CategoryModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Add Product Category</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('store.category') }}" method="POST">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="Category_name" class="form-label">Category Name</label>
-                        <input type="text" class="form-control" id="category_name" name="category_name"
-                            placeholder="Category name" required>
-                        @error('category_name')
-                        <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <label for="category_status" class="form-label">Category Status</label>
-                        <select type="text" class="form-control select2 select2-hidden-accessible" id="status"
-                            name="status" required>
-                            <option selected="" disabled="">Select Status</option>
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
-                        </select>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-{{-- End of add brand modal form --}}
-
-
-
-{{-- Start of Edit brand Modal form --}}
-
-<div class="modal fade" id="editcategoryModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Edit Category</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form  id="editForm">
-                @csrf
-                @method('PUT')
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="category_name" class="form-label">Category Name</label>
-                        <input type="text" class="form-control" id="edit_category_name" name="category_name"
-                            value="{{ $category->category_name }}" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="status" class="form-label">Category Status</label>
-                        <select type="text" class="form-control" id="status" name="status" required>
-                                <option value="active" {{ $category->category_name == 'active' ? 'selected' : '' }}>Active
-                                </option>
-                                <option value="inactive" {{ $category->status == 'inactive' ? 'selected' : '' }}>Inactive
-                                </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Update</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-{{-- End of Edit brand Modal form --}}
 
 @endsection
 

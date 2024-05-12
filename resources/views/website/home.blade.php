@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="content-btn" data-swiper-parallax="-60">
                                     <a class="btn btn-secondary  me-3" href="">Products</a>
-                                    <a class="btn btn-outline-secondary" href="">Start Shopping</a>
+                                    <a class="btn btn-outline-secondary" href="{{ route('shop') }}">Start Shopping</a>
                                 </div>
                             </div>
                         </div>
@@ -216,249 +216,36 @@
             </div>
             <div class="clearfix">
                 <ul id="masonry" class="row g-xl-4 g-3">
-                    <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Tops wow fadeInUp"
-                        data-wow-delay="0.6s">
-                        <div class="shop-card">
-                            <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/1.png')}}" alt="image">
-                                <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                        <span class="d-md-block d-none">Quick View</span>
-                                    </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dz-content">
-                                <h5 class="title"><a href="">Cozy Knit Cardigan Sweater</a></h5>
-                                <h5 class="price">$80</h5>
-                            </div>
-                            <div class="product-tag">
-                                <span class="badge ">Get 20% Off</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Dresses Jacket wow fadeInUp"
-                        data-wow-delay="0.8s">
-                        <div class="shop-card">
-                            <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/2.png')}}" alt="image">
-                                <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                        <span class="d-md-block d-none">Quick View</span>
-                                    </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dz-content">
-                                <h5 class="title"><a href="">Sophisticated Swagger Suit</a></h5>
-                                <h5 class="price">$80</h5>
-                            </div>
-                            <div class="product-tag">
-                                <span class="badge ">Get 20% Off</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Dresses wow fadeInUp"
-                        data-wow-delay="1.0s">
-                        <div class="shop-card">
-                            <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/3.png')}}" alt="image">
-                                <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                        <span class="d-md-block d-none">Quick View</span>
-                                    </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dz-content">
-                                <h5 class="title"><a href="">Classic Denim Skinny Jeans</a></h5>
-                                <h5 class="price">$80</h5>
-                            </div>
-                            <div class="product-tag">
-                                <span class="badge ">Get 20% Off</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Tops Jacket wow fadeInUp"
-                        data-wow-delay="1.2s">
-                        <div class="shop-card">
-                            <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/4.png')}}" alt="image">
-                                <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                        <span class="d-md-block d-none">Quick View</span>
-                                    </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dz-content">
-                                <h5 class="title"><a href="">Athletic Mesh Sports Leggings</a>
-                                </h5>
-                                <h5 class="price">$80</h5>
-                            </div>
-                            <div class="product-tag">
-                                <span class="badge ">Get 20% Off</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Dresses wow fadeInUp"
-                        data-wow-delay="0.2s">
-                        <div class="shop-card">
-                            <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/5.png')}}" alt="image">
-                                <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                        <span class="d-md-block d-none">Quick View</span>
-                                    </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dz-content">
-                                <h5 class="title"><a href="">Vintage Denim Overalls Shorts</a>
-                                </h5>
-                                <h5 class="price">$80</h5>
-                            </div>
-                            <div class="product-tag">
-                                <span class="badge ">Get 20% Off</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Outerwear wow fadeInUp"
-                        data-wow-delay="0.4s">
-                        <div class="shop-card">
-                            <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/6.png')}}" alt="image">
-                                <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                        <span class="d-md-block d-none">Quick View</span>
-                                    </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dz-content">
-                                <h5 class="title"><a href="">Satin Wrap Party Blouse</a></h5>
-                                <h5 class="price">$80</h5>
-                            </div>
-                            <div class="product-tag">
-                                <span class="badge ">Get 20% Off</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Dresses wow fadeInUp"
-                        data-wow-delay="0.6s">
-                        <div class="shop-card">
-                            <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/7.png')}}" alt="image">
-                                <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa-solid fa-eye d-md-none d-block"></i>
-                                        <span class="d-md-block d-none">Quick View</span>
-                                    </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dz-content">
-                                <h5 class="title"><a href="">Plaid Wool Winter Coat</a></h5>
-                                <h5 class="price">$80</h5>
-                            </div>
-                            <div class="product-tag">
-                                <span class="badge ">Get 20% Off</span>
-                            </div>
-                        </div>
-                    </li>
+                    @foreach ($products as $product)
                     <li class="card-container col-6 col-xl-3 col-lg-3 col-md-4 col-sm-6 Tops wow fadeInUp"
                         data-wow-delay="2.0s">
                         <div class="shop-card">
                             <div class="dz-media">
-                                <img src="{{ asset('assets/images/shop/product/8.png')}}" alt="image">
+                                @if ($product->productImages->isNotEmpty())
+                                <img src="{{ asset($product->productImages->first()->product_image) }}" alt="image">
+                                @else
+                                    No Image Available
+                                @endif
                                 <div class="shop-meta">
-                                    <a href="javascript:void(0);" class="btn btn-secondary btn-md btn-rounded"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <a href="{{ route('product.details', $product->id) }}" class="btn btn-secondary btn-md btn-rounded"
+                                        >
                                         <i class="fa-solid fa-eye d-md-none d-block"></i>
                                         <span class="d-md-block d-none">Quick View</span>
                                     </a>
-                                    <div class="btn btn-primary meta-icon dz-wishicon">
-                                        <i class="icon feather icon-heart dz-heart"></i>
-                                        <i class="icon feather icon-heart-on dz-heart-fill"></i>
-                                    </div>
-                                    <div class="btn btn-primary meta-icon dz-carticon">
-                                        <i class="flaticon flaticon-basket"></i>
-                                        <i class="flaticon flaticon-basket-on dz-heart-fill"></i>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="dz-content">
-                                <h5 class="title"><a href="">Water-Resistant Windbreaker
-                                        Jacket</a></h5>
-                                <h5 class="price">$80</h5>
+                                <h5 class="title" style="font-size: 14px;"><a href="">{{ $product->product_name }}</a></h5>
+                                <h5 class="price">{{number_format($product->selling_price)  }}</h5>
                             </div>
                             <div class="product-tag">
                                 <span class="badge ">Get 20% Off</span>
                             </div>
                         </div>
                     </li>
+
+                @endforeach
                 </ul>
             </div>
         </div>
@@ -466,16 +253,10 @@
     <!-- Products Section Start-->
 
     <!-- Feature Box -->
-    <div class="content-inner py-0  image-wrapper">
+    {{-- <div class="content-inner py-0  image-wrapper">
         <div class="container-fluid px-0">
             <div class="row gx-0">
-                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="insta-post dz-media dz-img-effect rotate">
-                        <a href="">
-                            <img src="images/clothe/feature/1.png" alt="">
-                        </a>
-                    </div>
-                </div>
+
                 <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-4 wow fadeIn" data-wow-delay="0.2s">
                     <div class="insta-post dz-media dz-img-effect rotate">
                         <a href="">
@@ -523,6 +304,6 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Feature Box End -->
 @endsection

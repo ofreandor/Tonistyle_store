@@ -113,8 +113,11 @@
                         <div class="col-lg-3 col-6">
 
                             <div class="small-box bg-danger">
+                                @php
+                                $customers = \App\Models\User::count();
+                                @endphp
                                 <div class="inner">
-                                    <h3>65</h3>
+                                    <h3>{{ $customers }}</h3>
                                     <p> Customers</p>
                                 </div>
                                 <div class="icon">

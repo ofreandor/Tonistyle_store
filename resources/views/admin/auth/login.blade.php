@@ -2,8 +2,7 @@
 
 
 
-<html lang="en" class="light-style layout-navbar-fixed layout-wide " dir="ltr" data-theme="theme-default"
-    data-assets-path="../../assets/" data-template="front-pages">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -11,10 +10,7 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>Tonistyle Store | Admin</title>
-    {{-- <link rel="canonical" href="https://themeselection.com/item/sneat-bootstrap-html-admin-template/"> --}}
 
-
-    <!-- ? PROD Only: Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -44,25 +40,25 @@
         rel="stylesheet">
 
 
-    <link rel="stylesheet" href="{{ asset('login/vendor/fonts/boxicons.css') }}" />
-    <link rel="stylesheet" href="{{ asset('login/vendor/css/rtl/core.css') }}" />
-    <link rel="stylesheet" href="{{ asset('login/vendor/css/rtl/theme-default.css') }}" />
-    <link rel="stylesheet" href="{{ asset('login/css/demo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/vendor/fonts/boxicons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/vendor/css/rtl/core.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/vendor/css/rtl/theme-default.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/css/demo.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset('login/vendor/css/pages/front-page.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/vendor/css/pages/front-page.css') }}" />
     <!-- Vendors CSS -->
 
-    <link rel="stylesheet" href="{{ asset('login/vendor/libs/nouislider/nouislider.css') }}" />
-    <link rel="stylesheet" href="{{ asset('login/vendor/libs/swiper/swiper.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/vendor/libs/nouislider/nouislider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/vendor/libs/swiper/swiper.css') }}" />
 
     <!-- Page CSS -->
 
-    <link rel="stylesheet" href="{{ asset('login/vendor/css/pages/front-page-landing.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sigin/vendor/css/pages/front-page-landing.css') }}" />
 
     <!-- Helpers -->
-    <script src="{{ asset('login/vendor/js/helpers.js') }}"></script>
-    <script src="{{ asset('login/vendor/js/dropdown-hover.js') }}"></script>
-    <script src="{{ asset('login/vendor/js/mega-dropdown.js') }}"></script>
+    <script src="{{ asset('sigin/vendor/js/helpers.js') }}"></script>
+    <script src="{{ asset('sigin/vendor/js/dropdown-hover.js') }}"></script>
+    <script src="{{ asset('sigin/vendor/js/mega-dropdown.js') }}"></script>
 </head>
 
 <body>
@@ -85,7 +81,7 @@
             <div class="col-md-5">
                 <div class="card">
                         <div class="account-logo text-center">
-                            <a href=""><img src="{{ asset('login/logo/logo.png') }}" alt="" width="120px"></a>
+                            <a href=""><img src="{{ asset('sigin/logo/logo.png') }}" alt="" width="120px"></a>
                         </div>
                     <div class="card-header text-center"><h4>Login into your account </h4></div>
                     <div class="card-body">
@@ -138,21 +134,21 @@
 
 
 
-    <script src="{{ asset('login/vendor/libs/popper/popper.js') }}"></script>
-    <script src="{{ asset('login/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('sigin/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('sigin/vendor/js/bootstrap.js') }}"></script>
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="{{ asset('login/vendor/libs/nouislider/nouislider.js') }}"></script>
-    <script src="{{ asset('login/vendor/libs/swiper/swiper.js') }}"></script>
+    <script src="{{ asset('sigin/vendor/libs/nouislider/nouislider.js') }}"></script>
+    <script src="{{ asset('sigin/vendor/libs/swiper/swiper.js') }}"></script>
 
     <!-- Main JS -->
-    <script src="{{ asset('login/js/front-main.js') }}"></script>
+    <script src="{{ asset('sigin/js/front-main.js') }}"></script>
 
 
     <!-- Page JS -->
-    <script src="{{ asset('login/js/front-page-landing.js') }}"></script>
+    <script src="{{ asset('sigin/js/front-page-landing.js') }}"></script>
 
 </body>
 

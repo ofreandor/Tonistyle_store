@@ -40,6 +40,7 @@
                                             Add New Brand
                                         </button>
                                     </div>
+                                    @include('admin.brand.add')
                                 </div>
 
                                     <div class="card-body py-3">
@@ -73,17 +74,12 @@
                                                     <td>{{ \Carbon\Carbon::parse($brand->created_at)->format('jS M Y') }}</td>
                                                     <td>
                                                         <div style="display: flex; align-items: center;">
-                                                            <a href="#" data-toggle="modal" data-target="#editBrandModal">
-                                                                <i class="fas fa-edit mr-3 text-info" ></i>
+                                                           <a type="button" data-toggle="modal" data-target="#editbrandModal{{ $brand->id }}" class="edit_cat">
+                                                                <i class="fas fa-edit mr-3 text-secondary"></i>
                                                             </a>
 
-                                                            <form action="{{ route('delete.brand', $brand->id) }}" method="POST" id="deleteForm">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                               <a type="submit" onclick="confirmDelete({{$brand->id}})">
-                                                                    <i class="fas fa-trash-alt text-danger"></i>
-                                                                </a>
-                                                            </form>
+                                                            @include('admin.brand.edit')
+
                                                         </div>
                                                     </td>
 
@@ -109,93 +105,6 @@
 
     </div>
 
-
-        {{-- Add brand modal form start here --}}
-        <div class="modal fade" id="brandModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Add Product Brand</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form  action="{{ route('store.brand') }}" method="POST">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="brand_name" class="form-label">Brand Name</label>
-                                <input type="text" class="form-control" id="brand_name" name="brand_name" placeholder="Brand name" required>
-                                    @error('brand_name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                            </div>
-                            <div class="mb-3">
-                                <label for="brand_status" class="form-label">Brand Status</label>
-                                <select type="text" class="form-control select2 select2-hidden-accessible" id="brand_status" name="brand_status" required>
-                                    <option selected="" disabled="">Select Status</option>
-                                    <option value="active">Active</option>
-                                    <option value="inactive">Inactive</option>
-                                </select>
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        {{-- End of add brand modal form  --}}
-
-
-
-        {{-- Start of Edit brand Modal form  --}}
-
-            <div class="modal fade" id="editBrandModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Edit Brand</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form action="{{ route('brand.update', $brand->id) }}" method="POST">
-                            @csrf
-                            @method('PUT')
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="brand_name" class="form-label">Brand Name</label>
-                                    <input type="text" class="form-control" id="brand_name" name="brand_name"
-                                        value="{{ $brand->brand_name }}" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="brand_status" class="form-label">Brand Status</label>
-                                    <select type="text" class="form-control" id="brand_status" name="brand_status" required>
-                                        <option value="active" {{ $brand->brand_status == 'active' ? 'selected' : '' }}>Active
-                                        </option>
-                                        <option value="inactive" {{ $brand->brand_status == 'inactive' ? 'selected' : '' }}>Inactive
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Update</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-        {{-- End of Edit brand Modal form  --}}
 
     @endsection
 

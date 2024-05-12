@@ -18,8 +18,8 @@ class UserSeeder extends Seeder
         //
 
         User::create([
-            'first_name' => 'Customer Jon Doe',
-            'last_name' => 'User',
+            'first_name' => 'Jon',
+            'last_name' => 'Doe',
             'email' => 'jondoe@tonistyle.com',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
@@ -30,8 +30,8 @@ class UserSeeder extends Seeder
 
 
          User::create([
-            'first_name' => 'Customer Alex Smith',
-            'last_name' => 'User',
+            'first_name' => 'Alex',
+            'last_name' => 'Smith',
             'email' => 'alex@tonistyle.com',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),

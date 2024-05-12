@@ -124,6 +124,17 @@ class BrandSeeder extends Seeder
             'brand_name' => 'High Fashion',
         ]);
 
+        Brand::create([
+            'brand_name' => 'Oraimo',
+        ]);
+
+
+        Brand::create([
+            'brand_name' => 'Nexus',
+        ]);
+
+
+
 
         Brand::create([
             'brand_name' => 'General Products',
